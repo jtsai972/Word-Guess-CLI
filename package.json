@@ -1,0 +1,23 @@
+{
+  "name": "Word-Guess-CLI",
+  "version": "1.0.0",
+  "description": "<!-- *** Thanks for checking out this README Template. If you have a suggestion that would *** make this better, please fork the repo and create a pull request or simply open *** an issue with the tag \"enhancement\". *** Thanks again! Now go create something AMAZING! :D *** *** *** *** To avoid retyping too much info. Do a search and replace for the following: *** github_username, repo, twitter_handle, email -->",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtsai972/Word-Guess-CLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtsai972/Word-Guess-CLI/issues"
+  },
+  "homepage": "https://github.com/jtsai972/Word-Guess-CLI#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0"
+  }
+}
