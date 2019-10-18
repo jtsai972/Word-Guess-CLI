@@ -1,26 +1,39 @@
-let Letter = function(char, rightChar) {
-    // * str, Should store the underlying character for a letter 
-    let rightChar;
+let Letter = function(character) {
+    // console.log("-------------------");
+    // console.log(`Inputs: ${guess} ${answer}`);
 
-    // * bool, should store whether this letter has been guessed yet 
-    let guessed;
+    // * str, Should store the underlying character for a letter
+    this.character = character;
+    // * bool, should store whether this letter has been guessed yet
+    this.guessed = false; 
 
     // * return the character if the letter has been guessed or an underscore if the letter has not been guessed 
-    let results = (char, guessed) => { return guessed ? char : "_" }
-
-    // * takes a character as an argument and checks it against the underlying character to update the bool to if it's true if it was guessed correctly 
-    let check = (char, rightChar) => {
-        guessed = char === rightChar ? true : false;
-        console.log(guessed);
-
-        let res = results(char, guessed);
-        console.log(res);
+    this.results = function() {
+        return this.guessed ? answer : "_"; 
     }
 
-    // ? try using a hash table?
+    // * takes a character as an argument and checks it against the underlying character to update the bool to if it's true if it was guessed correctly 
+    this.check = function(guess) {
+        //console.log("Running check");
+
+        this.guessed = (guess === this.character) ? true : false;
+        //console.log(`Guessed right? ${ this.guessed }`);
+
+        //console.log(this.guessed);
+    }
 }
 
-Letter("c","a");
 
+module.exports = Letter;
 
-// module.exports = Letter;
+function test() {
+    let tester = new Letter("e");
+    console.log(tester);
+
+    tester.check("g");
+    console.log(tester.guessed);
+
+    console.log(tester.results());
+}
+
+//test();
