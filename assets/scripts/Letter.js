@@ -9,14 +9,15 @@ let Letter = function(character) {
 
     // * return the character if the letter has been guessed or an underscore if the letter has not been guessed 
     this.results = function() {
-        return this.guessed ? answer : "_"; 
+        return this.guessed ? this.character : "_"; 
     }
 
     // * takes a character as an argument and checks it against the underlying character to update the bool to if it's true if it was guessed correctly 
     this.check = function(guess) {
         //console.log("Running check");
-
-        this.guessed = (guess === this.character) ? true : false;
+        if(guess === this.character) {
+            this.guessed = true;
+        }
         //console.log(`Guessed right? ${ this.guessed }`);
 
         //console.log(this.guessed);
