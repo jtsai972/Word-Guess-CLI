@@ -36,9 +36,12 @@ function start() {
         let choice = answer.toPlay;
         //console.log(choice);
 
-        choice==="Yes" ? 
-            prompter() : 
+        if(choice==="Yes") {
+            word.toString();
+            prompter()
+        }  else {
             console.log(divider + "Exiting game." + divider);
+        }
         
     }).catch(function (err) {
         console.log(err);
@@ -53,7 +56,7 @@ function wordSelect() {
 
     let word = wordBank[rnd].toLowerCase();
     // let word = "node js"; // for testing
-    console.log(word);
+    //console.log(word);
     
     let result = new Word(word);
     // store the word
@@ -104,7 +107,7 @@ function runGame(guess) {
     }
 
     if(isDone) {
-        console.log("Are we done? " + isDone);
+        //console.log("Are we done? " + isDone);
         start();
     } else {
         /** Tracking guesses left */
@@ -113,7 +116,7 @@ function runGame(guess) {
             console.log("\nGuesses left: " + guesses);
 
             if (guesses <= 0) {
-                console.log("\nWe're out of guesses" + divider);
+                console.log("\nWe're out of guesses :(" + divider);
                 start();
             } 
         };

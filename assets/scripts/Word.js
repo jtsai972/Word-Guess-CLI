@@ -13,7 +13,7 @@ let Word = function(word) {
             str += this.wordArr[i].results() + " ";
             //console.log(`${this.wordArr[i].character}: ${this.wordArr[i].guessed}`);
         }
-        console.log(str);
+        console.log("\n" + str);
 
         //return str;
     }
