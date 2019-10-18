@@ -1,30 +1,7 @@
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** github_username, repo, twitter_handle, email
--->
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -63,12 +40,20 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Learning to create a Word Guess command-line game using constructor functions
+Learning to create a Word Guess command-line game using constructor functions. 
+
+This project uses a word bank to randomly select words. 
+
+There's a constructor for the selected word and another for each individual letter of the word. The letter constructors contain a bool to determine if the letter has been guessed and will display either a `_` or a `<char>` depending on whether the letter has been guessed.
+
+Until you choose to exit the game at the new word prompt or exit using the escape key `,` during the guessing, this game will continue to run and pull words from the word bank to guess;
+
+in the future perhaps I should add in a score counter or something as well.
 
 ### Built With
  * [Node.js](https://nodejs.org/en/)
  * [Node Package - Inquirer](https://www.npmjs.com/package/inquirer)
- * [othneildrew - Best README Template](https://github.com/othneildrew/Best-README-Template)
+ * [Othneil Drew - Best README Template](https://github.com/othneildrew/Best-README-Template)
  
  
  [Back to Table of Contents](#table-of-contents)
@@ -83,7 +68,7 @@ To get a local copy up and running follow these simple steps.
  
 1. Clone the repo
 ```sh
-git clone https:://github.com/jtsai972/Word-Guess-CLI.git
+git clone https://github.com/jtsai972/Word-Guess-CLI.git
 ```
 2. Install NPM packages
 ```sh
@@ -96,11 +81,14 @@ npm install
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-`node letter.js` or `node word.js`
+`node index`
 
-Honestly, not sure, I'll have to see how it goes after working on it a bit.
+The index file is in the main directory for easier script running.
 
-You can find some example images in the [images folder](https://github.com/jtsai972/Word-Guess-CLI/tree/master/assets/images) `assets>images`
+To exit/escape during the guessing portion of the game,
+enter a `,` to exit the script.
+
+You can find some example images in the [images folder](https://github.com/jtsai972/Word-Guess-CLI/tree/master/assets/images) `assets > images` or check out some quick thumbnails in [Screenshot Thumbnails](#screenshot-thumbnails)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -120,7 +108,9 @@ Contributions are what make the open source community such an amazing place to b
 ### Screenshot Thumbnails
 
 <div align="center">
-
+  <img src="https://raw.githubusercontent.com/jtsai972/Word-Guess-CLI/master/assets/images/ss-starting-game.PNG" alt ="Screenshot of starting the game" width="45%">
+  <span>&nbsp;</span>
+  <img src="https://raw.githubusercontent.com/jtsai972/Word-Guess-CLI/master/assets/images/ss-exiting-game.PNG" alt ="Screenshot of exiting the game" width="45%">
 </div>
 
 [Back to Table of Contents](#table-of-contents)
